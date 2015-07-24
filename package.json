@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "bower":"^1.4.1",
     "browser-sync": "^2.8.0",
     "connect-history-api-fallback": "^1.1.0",
     "del": "^1.1.1",
@@ -32,7 +33,8 @@
   },
   "scripts": {
     "test": "gulp test:local",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "postinstall": "./node_modules/bower/bin/bower install"
   },
   "engines": {
     "node": ">=0.10.0"

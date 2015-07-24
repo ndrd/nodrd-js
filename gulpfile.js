@@ -244,13 +244,6 @@ gulp.task('default', ['clean'], function (cb) {
 });
 
 
-gulp.task('serveprod', function() {
-  connect.server({
-    root: 'app',
-    port: process.env.PORT || 5000, // localhost:5000
-    livereload: false
-  });
-});
 
 // Load tasks for web-component-tester
 // Adds tasks for `gulp test:local` and `gulp test:remote`
