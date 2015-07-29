@@ -228,20 +228,14 @@ gulp.task('serve:dist', ['default'], function () {
     //       will present a certificate warning in the browser.
     // https: true,
     server: 'dist',
-    middleware: [ historyApiFallback() ]
+    port: process.env.PORT || 8080,
+    host: process.env.HOST || 'localhost'
+
   });
 
-  $.connect.server({
-    root: 'app',
-    port: process.env.PORT || 5000, // localhost:5000
-    livereload: false,
-    middleware: function(connect) {
-      return [
-        connect().use(historyApiFallback())
-      ];
-    }  
-  });
 });
+
+
 
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
